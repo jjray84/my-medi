@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Medi</title>
+  <link rel="stylesheet"> <!--this is for css tailwind-->
+</head>
+
+<body>
+  <header>
+    <h1></h1>
+    {{#if logged_in}}
+    <nav>
+      <button class="btn" id="logout">logout</button>
+    </nav>
+    {{/if}}
+  </header>
+  <main>
+    {{{ body }}}
+  </main>
+  <footer></footer>
+
+  {{#if logged_in}}
+  <script></script> <!--This is for a JS link-->
+  {{/if}}
+</body>
+
+</html>
