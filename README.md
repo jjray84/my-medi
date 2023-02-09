@@ -19,3 +19,10 @@ THEN I will be able to change the values of my medications and medical informati
 
 WHEN I logout of my account
 THEN I will be taken back to the login page
+
+
+
+
+
+## Live Link
+https://my-medi.herokuapp.com/
