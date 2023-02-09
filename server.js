@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
+const hbs = exphbs.create({})
 
 // Sets up the express app
 const app = express();
