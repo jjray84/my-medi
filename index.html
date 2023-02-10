@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="fantasy">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Medi</title>
+  <link href="/dist/output.css" rel="stylesheet">
+  <link href="/public/assets/css/stylesheet.css" rel="stylesheet">
+</head>
+
+<div class="navbar nav.navbar.w-full bg-secondary">
+  <h1 class="bg-primary font-title mb-2 text-4xl font-bold sm:text-5xl lg:text-6xl">My Medi</h1>
+</div>
+
+<body>
+
+  <main>
+    <!-- Holds the Name and E. Contact -->
+    <section style="background-color: pink;" id="contact-bar">
+        <p class="contact-info">Name: <span>Kayla Aguilera</span></p>
+        <p class="contact-info">Emergency Contact: <span>Kyle Feener</span></p>
+    </section>
+
+    <!-- Holds the Cards - Current, Med Info, Add/Delete Buttons -->
+    <section style="background-color: rgb(158, 31, 131);" id="editables">
+        <!-- Current medications -->
+        <div class = "display-info" style="background-color: gray;">
+            <p class="titles">Current Medications</p>
+            <div id="current-medications"></div>
+        </div>
+
+        <!-- Medical Information -->
+        <div class = "display-info" style="background-color: rgb(161, 161, 161);">
+            <p class="titles">Medical Information</p>
+            <div id="medical-information">Where Medicines Go</div>
+
+        </div>
+
+        <!-- To hold two buttons - Edit Current Medications, Edit Medical Information -->
+        <div class = "display-info edit-buttons" style="background-color: rgb(211, 210, 210);" >
+            <button type="button" style="background-color: blueviolet;">Edit Current Medications</button>
+            <button type="button" style="background-color: rgb(43, 226, 67);">Edit Medical Information</button>
+
+        </div>
+    </section>
+    
+  </main>
+  
+
+</body>
+
+</html>
