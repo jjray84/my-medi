@@ -19,4 +19,23 @@ router.post("/", async (req, res) => {
     }
 });
 
+// PUT for updating existing medication by id
+router.put("/:id", async (req, res) => {
+    try {
+        const medicationData = await Medication.update(req.body, {
+            where: {
+                id: req.params.id
+            }
+        });
+        if (!medicationData[0]) {
+            res.status(404).json({ message: "No medication with this id"});
+            return;
+        }
+        res.status(200).json(medicationData);
+    }
+    catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
