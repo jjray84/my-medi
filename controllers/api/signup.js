@@ -1,14 +1,17 @@
+const User = require("../../models/user");
+
 const router = require("express").Router();
 
+// route for signup api will be /api/signup
 router.post("/", (req, res) => {
-  // get user sent data from request body
-  const { userName, email, password } = req.body;
-
-  // TODO : connect to db and create a new user with the data
-
-  // return success or failure based on the output
-
-  res.send("done");
+  User.create(req.body)
+    .then((user) => {
+      res.json({ user: user, message: "Account created!" });
+    })
+    .catch((err) => {
+      console.error(err.errors);
+      res.status(400).send(err.errors);
+    });
 });
 
 module.exports = router;
