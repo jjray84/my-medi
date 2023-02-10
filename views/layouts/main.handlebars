@@ -9,22 +9,20 @@
   </head>
 
   <nav class="navbar navbar-expand-large navbar-dark bg-primary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img>
-      My Medi
-    </a>
-  </div>
-</nav>
-
-  <body>
-    <header>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img>
+        My Medi
+      </a>  
       {{#if logged_in}}
-      <nav>
+      <nav class="ml-auto">
         <button class="btn bg-secondary" id="logout">logout</button>
       </nav>
       {{/if}}
-    </header>
+    </div>
+  </nav>
+
+  <body>
     <main>
       {{{ body }}}
     </main>
