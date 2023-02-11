@@ -18,7 +18,9 @@
     <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
       <h4 class="card-header">Current Medications</h4>
       <div class="card-body">
-        <p class="card-text">Example</p>
+        {{#each medications as |medication|}}
+        {{> medication}}
+        {{/each}}
       </div>
     </div>
 
