@@ -14,28 +14,27 @@
   </div>
 </div>
 
-<section class=" justify-content-around mt-2 row">
+<section class="row justify-content-around mt-2">
     <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
-      <h4 class="card-header">Current Medications</h4>
+      <h4 class="card-header">Edit Your Current Medications</h4>
       <div class="card-body">
         <p class="card-text">Example</p>
       </div>
     </div>
 
     <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
-      <h4 class="card-header">Medical Information</h4>
+      <h4 class="card-header">Add Your New Medication</h4>
       <div class="card-body">
-        <p class="card-text">Example</p>
+        <label class="col-form-label col-form-label-lg mt-1" for="inputLarge">Medication Name</label>
+        <input class="form-control form-control-lg" type="text" placeholder="Aspirin" id="inputLarge">
+
+        <label class="col-form-label col-form-label-lg mt-3" for="inputLarge">Dosage</label>
+        <input class="form-control form-control-lg" type="text" placeholder="85 mg" id="inputLarge">
+
+        <label class="col-form-label col-form-label-lg mt-3" for="inputLarge">Notes</label>
+        <input class="form-control form-control-lg" type="text" placeholder="For Atrial Fibrillation" id="inputLarge">
       </div>
     </div>
-
-    <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
-      <h4 class="card-header">Makes Changes to Your Information</h4>
-      <div class="card-body" id="buttons-section">
-        <button type="button" class="btn btn-primary btn-lg m-2" id ="edit-meds" style="font-size: 21px">Edit Your Medications</button>
-        <button type="button" class="btn btn-primary btn-lg m-2" id="edit-info" style="font-size: 21px">Edit Your Medical Information</button>
-      </div>
-    </div>    
+ 
 </section>
 
-<script src="/js/homepage.js"></script>
