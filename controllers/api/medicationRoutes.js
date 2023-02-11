@@ -3,6 +3,9 @@ const { Medication } = require("../../models");
 
 // /api/medication
 
+router.get("/", (req,res) => {
+    res.render("medications")
+})
 // POST for adding new medication
 router.post("/", async (req, res) => {
     try {
