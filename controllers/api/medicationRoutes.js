@@ -57,4 +57,21 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+router.delete("/:id", async (req, res) => {
+  try {
+    const deletedMedicationCount = await Medication.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (deletedMedicationCount === 1) {
+      res.send(200);
+    } else {
+      res.send(404);
+    }
+  } catch (err) {
+    res.send(500);
+  }
+});
+
 module.exports = router;
