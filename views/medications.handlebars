@@ -1,5 +1,4 @@
 <!-- Holds the Name and E. Contact -->
-
 <div class="list-group">
   <div class="list-group-item list-group-item-action flex-column bg-secondary align-items-start active">
     <div class="d-flex w-100 justify-content-between">
@@ -15,26 +14,32 @@
 </div>
 
 <section class="row justify-content-around mt-2">
-    <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
+    <div class="card text-white bg-danger mb-3" style="max-width: 30rem;">
       <h4 class="card-header">Edit Your Current Medications</h4>
       <div class="card-body">
-        <p class="card-text">Example</p>
+        {{#each medications as |medication|}}
+        {{> medication}}
+        {{/each}}
+
       </div>
     </div>
 
-    <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
+    <div class="card text-white bg-danger mb-3" style="max-width: 30rem;">
       <h4 class="card-header">Add Your New Medication</h4>
       <div class="card-body">
-        <label class="col-form-label col-form-label-lg mt-1" for="inputLarge">Medication Name</label>
-        <input class="form-control form-control-lg" type="text" placeholder="Aspirin" id="inputLarge">
+        <form class="card-header" id="medication-form">
+          <input class="form-control form-control-lg d-none" id="medication-user-id" value="{{user_id}}">
+          <label class="col-form-label col-form-label-lg mt-1" for="inputLarge">Medication Name</label>
+          <input class="form-control form-control-lg" type="text" placeholder="Aspirin" id="medication-name" required>
 
-        <label class="col-form-label col-form-label-lg mt-3" for="inputLarge">Dosage</label>
-        <input class="form-control form-control-lg" type="text" placeholder="85 mg" id="inputLarge">
+          <label class="col-form-label col-form-label-lg mt-3" for="inputLarge">Dosage in mg:</label>
+          <input class="form-control form-control-lg" type="number" placeholder="85" id="medication-dosage" required>
 
-        <label class="col-form-label col-form-label-lg mt-3" for="inputLarge">Notes</label>
-        <input class="form-control form-control-lg" type="text" placeholder="For Atrial Fibrillation" id="inputLarge">
-
-        <button type="submit" class="btn btn-primary mt-3" id="submit-new">Submit</button>
+          <label class="col-form-label col-form-label-lg mt-3" for="inputLarge">Notes</label>
+          <textarea class="form-control form-control-lg" type="text" placeholder="For Atrial Fibrillation" id="medication-notes" required></textarea>
+      
+          <button type="submit" class="btn btn-primary mt-3" id="add-medication">Add medication</button>
+        </form>
 
       </div>
     </div>

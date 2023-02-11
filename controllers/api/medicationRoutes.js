@@ -3,11 +3,27 @@ const { Medication } = require("../../models");
 
 // /api/medication
 
-router.get("/", (req, res) => {
-  res.render("medications", {
-    logged_in: req.session.logged_in,
-  });
+// route to render /edit/medications page
+router.get("/", async (req, res) => {
+  try {
+    // get all the medications using findAll for the current logged in user
+    // render the medications in homepage
+    const medicationData = await Medication.findAll({
+      where: { user_id: req.session.user_id },
+      raw: true,
+    });
+    res.render("medications", {
+      logged_in: req.session.logged_in,
+      user_id: req.session.user_id,
+      medications: medicationData,
+    });
+  } catch (error) {
+    res.render("medications", {
+      logged_in: req.session.logged_in,
+    });
+  }
 });
+
 // POST for adding new medication
 router.post("/", async (req, res) => {
   try {
