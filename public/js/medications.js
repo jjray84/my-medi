@@ -38,3 +38,6 @@ async function addMedication(event) {
 
 // checkUser should be defined before it is used
 medicationForm.addEventListener("submit", addMedication);
+
+// set a true flag so that homepage reloads while navigating back
+localStorage.setItem("isNavigationRequired", "true");
