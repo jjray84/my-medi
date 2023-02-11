@@ -36,5 +36,18 @@ async function addMedication(event) {
   }
 }
 
+async function deleteMedication(medicationId) {
+  try {
+    const response = await fetch(`/api/medications/${medicationId}`, {
+      method: "DELETE",
+    });
+    if (response.ok) {
+      location.reload();
+    }
+  } catch (error) {
+    alert("Failed to delete medication, please try again");
+  }
+}
+
 // checkUser should be defined before it is used
 medicationForm.addEventListener("submit", addMedication);
