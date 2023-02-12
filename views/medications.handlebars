@@ -25,7 +25,7 @@
     </div>
 
     <div class="card text-white bg-danger mb-3" style="max-width: 30rem;">
-      <h4 class="card-header">Add Your New Medication</h4>
+      <h4 class="card-header" id="medication-header">Add Your New Medication</h4>
       <div class="card-body">
         <form class="card-header" id="medication-form">
           <input class="form-control form-control-lg d-none" id="medication-user-id" value="{{user_id}}">
@@ -39,6 +39,7 @@
           <textarea class="form-control form-control-lg" type="text" placeholder="For Atrial Fibrillation" id="medication-notes" required></textarea>
       
           <button type="submit" class="btn btn-primary mt-3" id="add-medication">Add medication</button>
+          <button type="reset" class="btn btn-secondary mt-3 d-none" id="cancel-update-medication" onclick="resetAddForm()">Cancel</button>
         </form>
 
       </div>
