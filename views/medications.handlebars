@@ -14,7 +14,7 @@
 </div>
 
 <section class="row justify-content-around mt-2">
-    <div class="card text-white bg-danger mb-3" style="max-width: 30rem;">
+    <div class="card text-white bg-info shadow-lg mb-3" style="max-width: 30rem;">
       <h4 class="card-header">Edit Your Current Medications</h4>
       <div class="card-body">
         {{#each medications as |medication|}}
@@ -24,22 +24,22 @@
       </div>
     </div>
 
-    <div class="card text-white bg-danger mb-3" style="max-width: 30rem;">
+    <div class="card text-white bg-info shadow-lg mb-3" style="max-width: 30rem;">
       <h4 class="card-header" id="medication-header">Add Your New Medication</h4>
       <div class="card-body">
         <form class="card-header" id="medication-form">
           <input class="form-control form-control-lg d-none" id="medication-user-id" value="{{user_id}}">
           <label class="col-form-label col-form-label-lg mt-1" for="inputLarge">Medication Name</label>
-          <input class="form-control form-control-lg" type="text" placeholder="Aspirin" id="medication-name" required>
+          <input class="form-control form-control-lg" type="text" id="medication-name" required>
 
-          <label class="col-form-label col-form-label-lg mt-3" for="inputLarge">Dosage in mg:</label>
-          <input class="form-control form-control-lg" type="number" placeholder="85" id="medication-dosage" required>
+          <label class="col-form-label col-form-label-lg mt-3" for="inputLarge">Dosage Amount</label>
+          <input class="form-control form-control-lg" type="number" id="medication-dosage" required>
 
           <label class="col-form-label col-form-label-lg mt-3" for="inputLarge">Notes</label>
-          <textarea class="form-control form-control-lg" type="text" placeholder="For Atrial Fibrillation" id="medication-notes" required></textarea>
+          <textarea class="form-control form-control-lg" type="text" id="medication-notes" required></textarea>
       
-          <button type="submit" class="btn btn-primary mt-3" id="add-medication">Add medication</button>
-          <button type="reset" class="btn btn-secondary mt-3 d-none" id="cancel-update-medication" onclick="resetAddForm()">Cancel</button>
+          <button type="submit" class="btn btn-primary bg-light text-dark shadow-sm mt-3" id="add-medication">Add medication</button>
+          <button type="reset" class="btn btn-secondary bg-light text-dark shadow-sm mt-3 d-none" id="cancel-update-medication" onclick="resetAddForm()">Cancel</button>
         </form>
 
       </div>
