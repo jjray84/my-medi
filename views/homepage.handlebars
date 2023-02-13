@@ -1,7 +1,7 @@
 <!-- Holds the Name and E. Contact -->
 
 <div class="list-group">
-  <div class="list-group-item list-group-item-action flex-column bg-secondary align-items-start active">
+  <div class="list-group-item list-group-item-action flex-column shadow-lg bg-secondary align-items-start active">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Name: {{user_name}} <span></span></h5>
     </div>
@@ -15,7 +15,7 @@
 </div>
 
 <section class=" justify-content-around mt-2 row">
-    <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
+    <div class="card text-white shadow-lg bg-info mb-3" style="max-width: 20rem;">
       <h4 class="card-header">Current Medications</h4>
       <div class="card-body">
         {{#each medications as |medication|}}
@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
+    <div class="card text-white shadow-lg bg-info mb-3" style="max-width: 20rem;">
       <h4 class="card-header">Medical Information</h4>
       <div class="card-body">
       <div>
@@ -65,11 +65,11 @@
       </div>
     </div>
 
-    <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
+    <div class="card text-white shadow-lg bg-info mb-3" style="max-width: 20rem;">
       <h4 class="card-header">Makes Changes to Your Information</h4>
       <div class="card-body" id="buttons-section">
-        <button type="button" class="btn btn-primary btn-lg m-2" id ="edit-meds" style="font-size: 23px">Edit Your Medications</button>
-        <button type="button" class="btn btn-primary btn-lg m-2" id="edit-info" style="font-size: 23px">Edit Your Medical Information</button>
+        <button type="button" class="btn btn-primary shadow-lg bg-light text-dark btn-lg m-2" id ="edit-meds" style="font-size: 23px">Edit Your Medications</button>
+        <button type="button" class="btn btn-primary shadow-lg bg-light text-dark btn-lg m-2" id="edit-info" style="font-size: 23px">Edit Your Medical Information</button>
       </div>
     </div>    
 </section>
