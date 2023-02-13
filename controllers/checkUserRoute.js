@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Medication } = require("../models");
+const { User, Medication, Information } = require("../models");
 const previousUser = require("../utils/auth");
 
 // 127.0.0.1:3001/homepage
@@ -25,10 +25,16 @@ router.get("/homepage", previousUser, async (req, res) => {
       where: { user_id: req.session.user_id },
       raw: true,
     });
+
+    const informationData = await Information.findOne({
+      where: { user_id: req.session.user_id },
+      raw: true,
+    });
     res.render("homepage", {
       logged_in: req.session.logged_in,
       user_id: req.session.user_id,
       medications: medicationData,
+      information: informationData,
       user_name: req.session.user_name,
     });
   } catch (error) {
