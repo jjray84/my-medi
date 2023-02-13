@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Medication } = require("../../models");
+const { Medication, Information } = require("../../models");
 
 // /api/medication
 
@@ -12,10 +12,16 @@ router.get("/", async (req, res) => {
       where: { user_id: req.session.user_id },
       raw: true,
     });
+
+    const informationData = await Information.findOne({
+      where: { user_id: req.session.user_id },
+      raw: true,
+    });
     res.render("medications", {
       logged_in: req.session.logged_in,
       user_id: req.session.user_id,
       medications: medicationData,
+      information: informationData,
       user_name: req.session.user_name,
     });
   } catch (error) {
