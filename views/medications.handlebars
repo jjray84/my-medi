@@ -6,7 +6,7 @@
     </div>
     <p class="mb-1">Phone Number: <span>{{information.personal_number}}</span></p>
 
-  <div class="d-flex w-100 justify-content-between">
+    <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Emergency Contact: <span></span></h5>
     </div>
     <p class="mb-1">Phone Number: <span>{{information.emergency_number}}</span></p>
@@ -29,22 +29,21 @@
       <div class="card-body">
         <form class="card-header" id="medication-form">
           <input class="form-control form-control-lg d-none" id="medication-user-id" value="{{user_id}}">
-          <label class="col-form-label col-form-label-lg mt-1" for="inputLarge">Medication Name</label>
+          <label class="col-form-label col-form-label-lg mt-1" for="medication-name">Medication Name</label>
           <input class="form-control form-control-lg" type="text" id="medication-name" required>
 
-          <label class="col-form-label col-form-label-lg mt-3" for="inputLarge">Dosage Amount</label>
+          <label class="col-form-label col-form-label-lg mt-3" for="medication-dosage">Dosage Amount</label>
           <input class="form-control form-control-lg" type="text" placeholder="50 mg" id="medication-dosage" required>
 
-          <label class="col-form-label col-form-label-lg mt-3" for="inputLarge">Notes</label>
+          <label class="col-form-label col-form-label-lg mt-3" for="medication-notes">Notes</label>
           <textarea class="form-control form-control-lg" type="text" id="medication-notes" required></textarea>
       
           <button type="submit" class="btn btn-primary bg-light text-dark shadow-sm mt-3" id="add-medication">Add medication</button>
           <button type="reset" class="btn btn-secondary bg-light text-dark shadow-sm mt-3 d-none" id="cancel-update-medication" onclick="resetAddForm()">Cancel</button>
         </form>
-
       </div>
     </div>
- 
+
 </section>
 
 <script src="/js/medications.js"></script>

@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const { Information } = require("../../models");
+const previousUser = require("../../utils/auth");
 
-router.get("/", async (req, res) => {
+router.get("/", previousUser, async (req, res) => {
   try {
     // get all the medications using findAll for the current logged in user
     // render the medications in homepage

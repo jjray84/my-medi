@@ -11,3 +11,8 @@
 .fa-solid {
   font-family: "Font Awesome 6 Free" !important;
 }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
