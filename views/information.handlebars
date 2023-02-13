@@ -4,12 +4,11 @@
   <input class="form-control form-control-lg d-none" id="medication-user-id" value="{{user_id}}">
   <div class="list-group-item list-group-item-action flex-column bg-secondary align-items-start active">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Name:<span>Kayla Aguilera</span></h5>
+      <h5 class="mb-1">Name: {{user_name}}<span></span></h5>
     </div>
-    <p class="mb-1">Phone Number: <span>{{information.personal_number}}</span></p>
-
+    <p class="mb-1">Phone Number: {{personal_number}}<span></span></p>
   <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Emergency Contact: <span>{{information.emergency_name}}</span></h5>
+      <h5 class="mb-1">Emergency Contact: {{emergency_contact}}<span></span></h5>
     </div>
     <p class="mb-1">Phone Number: <span>{{information.emergency_number}}</span></p>
   </div>

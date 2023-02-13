@@ -26,6 +26,9 @@ router.post("/", async (req, res) => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
       req.session.user_name = userData.name;
+      // req.session.phone_number = userData.phone_number;
+      // req.session.emergency_contact = userData.emergency_contact;
+      // req.session.emergency_phone = userData.emergency_phone;
       res.json({ user: userData, message: "You are now logged in!" });
     });
   } catch (err) {

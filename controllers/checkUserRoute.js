@@ -30,6 +30,9 @@ router.get("/homepage", previousUser, async (req, res) => {
       user_id: req.session.user_id,
       medications: medicationData,
       user_name: req.session.user_name,
+      personal_number: req.session.personal_number,
+      emergency_contact: req.session.emergency_contact,
+      emergency_number: req.session.emergency_number,
     });
   } catch (error) {
     res.render("homepage", {

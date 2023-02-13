@@ -12,7 +12,12 @@ router.get("/", async (req, res) => {
       logged_in: req.session.logged_in,
       user_id: req.session.user_id,
       information: informationData,
+      user_name: req.session.user_name,
+      personal_number: req.session.personal_number,
+      emergency_contact: req.session.emergency_contact,
+      emergency_number: req.session.emergency_number,
     });
+    console.log(information);
   } catch (error) {
     res.render("information", {
       logged_in: req.session.logged_in,
