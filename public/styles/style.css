@@ -7,3 +7,7 @@
   flex-direction: column;
   justify-content: space-evenly;
 }
+
+.fa-solid {
+  font-family: "Font Awesome 6 Free" !important;
+}
