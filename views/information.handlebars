@@ -26,7 +26,7 @@
 
 <section class="row justify-content-around mt-2">
   <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
-    <h4 class="card-header">Edit Your Current Information</h4>
+    <h4 class="card-header">Your Current Information</h4>
     <div class="card-body">
       <div>
         <p class="">Blood Type</p>
@@ -36,14 +36,14 @@
       </div>
 
       <div>
-        <p class="">Allergies Type</p>
+        <p class="">Allergies</p>
         <ul>
           <li>{{information.allergies}}</li>
         </ul>
       </div>
 
       <div>
-        <p class="">Tranplants and Dates</p>
+        <p class="">Transplants and Dates</p>
         <ul>
           <li>{{information.transplants}}</li>
         </ul>
@@ -60,67 +60,47 @@
   </div>
 
   <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
-    <h4 class="card-header">Add Your New Information</h4>
+    <h4 class="card-header">Add Your Information</h4>
     <div class="card-body">
       <label class="col-form-label">Your Phone Number</label>
       <input
         class="form-control"
-        placeholder="678-123-4567"
-        onclick="this.placeholder=' '"
         id="personal-number"
       />
 
       <label class="col-form-label">Emergency Contact</label>
       <input
         class="form-control"
-        placeholder="Junghoon Yoon"
-        onclick="this.placeholder=''"
-        onfocus="this.placeholder=''"
         id="emergency-name"
       />
 
       <label class="col-form-label">Emergency Contact Phone Number</label>
       <input
         class="form-control"
-        placeholder="404-456-7890"
-        onclick="this.placeholder=''"
-        onfocus="this.placeholder=''"
         id="emergency-number"
       />
 
       <label class="col-form-label">Blood Type</label>
       <input
         class="form-control"
-        placeholder="O-"
-        onclick="this.placeholder=''"
-        onfocus="this.placeholder=''"
         id="blood-type"
       />
 
       <label class="col-form-label">Allergies</label>
       <input
         class="form-control"
-        placeholder="Peanuts, Penicillin"
-        onclick="this.placeholder=''"
-        onfocus="this.placeholder=''"
         id="allergies"
       />
 
       <label class="col-form-label">Add Any Transplants and Dates</label>
       <input
         class="form-control"
-        placeholder="Kidney Transplant March 2020"
-        onclick="this.placeholder=''"
-        onfocus="this.placeholder=''"
         id="transplants"
       />
 
       <label class="col-form-label">Add Any Implants/Devices</label>
       <input
         class="form-control"
-        placeholder="Pacemaker"
-        onclick="this.placeholder=''"
-        onfocus="this.placeholder=''"
         id="devices"
       />
 
