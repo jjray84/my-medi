@@ -1,31 +1,38 @@
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config")
+const sequelize = require("../config/connection")
 
 class Information extends Model {};
 
 Information.init(
     {
         personal_number: {
-            type: DataTypes.INTEGER[10]
+            type: DataTypes.STRING,
+            defaultValue: "Not Provided"
         },
         emergency_contact: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            defaultValue: "Not Provided"
         },
         emergency_number: {
-            type: DataTypes.INTEGER[10]
+            type: DataTypes.STRING,
+            defaultValue: "Not Provided"
         },
         blood_type: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            defaultValue: "Not Provided"
         },
         allergies: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            defaultValue: "No Known Allergies"
         },
         transplants: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            defaultValue: "N/A"
         }, 
         devices: {
-            type: DataTypes.STRING
-        }, 
+            type: DataTypes.STRING,
+            defaultValue: "N/A"
+        },
         user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
