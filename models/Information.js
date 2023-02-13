@@ -33,6 +33,10 @@ Information.init(
       type: DataTypes.STRING,
       defaultValue: "N/A",
     },
+    notes: {
+      type: DataTypes.TEXT,
+      defaultValue: "None Provided"
+    },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
