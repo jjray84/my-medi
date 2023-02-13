@@ -1,3 +1,9 @@
 * {
   font-family: "Almarai", sans-serif !important;
 }
+
+#buttons-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
