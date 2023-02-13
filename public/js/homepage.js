@@ -11,11 +11,3 @@ buttonsSection.addEventListener("click", (event) => {
     document.location.href = "/edit/information";
   }
 });
-
-// adding this to reload homepage while navigating back from edit pages
-// so that the page refreshes with new content from server
-const isReload = localStorage.getItem("isNavigationRequired");
-if (isReload === "true") {
-  localStorage.setItem("isNavigationRequired", "false");
-  location.reload();
-}
