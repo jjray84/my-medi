@@ -14,6 +14,7 @@ router.get("/", async (req, res) => {
     res.render("information", {
       logged_in: req.session.logged_in,
       user_id: req.session.user_id,
+      user_name: req.session.user_name,
       information: informationData,
     });
   } catch (error) {
@@ -36,10 +37,10 @@ router.post("/", async (req, res) => {
       // user_id: req.body.user_id,
       ...req.body,
     });
-
     res.json(newInformation);
   } catch (err) {
-    res.send(err);
+    console.error(err);
+    res.status(500).send(err);
   }
 });
 

@@ -1,84 +1,138 @@
 <!-- Holds the Name and E. Contact -->
 
 <div class="list-group">
-  <input class="form-control form-control-lg d-none" id="medication-user-id" value="{{user_id}}">
-  <div class="list-group-item list-group-item-action flex-column bg-secondary align-items-start active">
+  <input
+    class="form-control form-control-lg d-none"
+    id="medication-user-id"
+    value="{{user_id}}"
+  />
+  <div
+    class="list-group-item list-group-item-action flex-column bg-secondary align-items-start active"
+  >
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Name:<span>Kayla Aguilera</span></h5>
+      <h5 class="mb-1">Name: <span>{{user_name}}</span></h5>
     </div>
-    <p class="mb-1">Phone Number: <span>{{information.personal_number}}</span></p>
+    <p class="mb-1">Phone Number:
+      <span>{{information.personal_number}}</span></p>
 
-  <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Emergency Contact: <span>{{information.emergency_name}}</span></h5>
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Emergency Contact:
+        <span>{{information.emergency_name}}</span></h5>
     </div>
-    <p class="mb-1">Phone Number: <span>{{information.emergency_number}}</span></p>
+    <p class="mb-1">Phone Number:
+      <span>{{information.emergency_number}}</span></p>
   </div>
 </div>
 
 <section class="row justify-content-around mt-2">
-    <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
-      <h4 class="card-header">Edit Your Current Information</h4>
-      <div class="card-body">
-        <div>
-          <p class="">Blood Type</p>
-          <ul>
-            <li>{{information.blood_type}}</li>
-          </ul>
-        </div>
-
-        <div>
-          <p class="">Allergies Type</p>
-          <ul>
-            <li>{{information.allergies}}</li>
-          </ul>
-        </div>
-
-        <div>
-          <p class="">Tranplants and Dates</p>
-          <ul>
-            <li>{{information.transplants}}</li>
-          </ul>
-        </div>
-
-        <div>
-          <p class="">Devices</p>
-          <ul>
-            <li>{{information.devices}}</li>
-          </ul>
-        </div>
-
+  <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
+    <h4 class="card-header">Edit Your Current Information</h4>
+    <div class="card-body">
+      <div>
+        <p class="">Blood Type</p>
+        <ul>
+          <li>{{information.blood_type}}</li>
+        </ul>
       </div>
-    </div>
 
-    <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
-      <h4 class="card-header">Add Your New Information</h4>
-      <div class="card-body">
-        <label class="col-form-label">Your Phone Number</label>
-        <input class="form-control" placeholder="678-123-4567" onclick="this.placeholder=' '" id="personal-number">
-
-        <label class="col-form-label">Emergency Contact</label>
-        <input class="form-control" placeholder="Junghoon Yoon" onclick="this.placeholder=''" onfocus="this.placeholder=''" id="emergency-name">
-
-        <label class="col-form-label">Emergency Contact Phone Number</label>
-        <input class="form-control" placeholder="404-456-7890" onclick="this.placeholder=''" onfocus="this.placeholder=''" id="emergency-number">
-
-        <label class="col-form-label">Blood Type</label>
-        <input class="form-control" placeholder="O-" onclick="this.placeholder=''" onfocus="this.placeholder=''" id="blood-type">
-
-        <label class="col-form-label">Allergies</label>
-        <input class="form-control" placeholder="Peanuts, Penicillin" onclick="this.placeholder=''" onfocus="this.placeholder=''" id="allergies">  
-
-        <label class="col-form-label">Add Any Transplants and Dates</label>
-        <input class="form-control" placeholder="Kidney Transplant March 2020" onclick="this.placeholder=''" onfocus="this.placeholder=''" id="transplants">
-
-        <label class="col-form-label">Add Any Implants/Devices</label>
-        <input class="form-control" placeholder="Pacemaker" onclick="this.placeholder=''" onfocus="this.placeholder=''" id="devices">    
-
-        <button type="submit" class="btn btn-primary mt-3" id="submit-new">Submit</button>
-
+      <div>
+        <p class="">Allergies Type</p>
+        <ul>
+          <li>{{information.allergies}}</li>
+        </ul>
       </div>
+
+      <div>
+        <p class="">Tranplants and Dates</p>
+        <ul>
+          <li>{{information.transplants}}</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="">Devices</p>
+        <ul>
+          <li>{{information.devices}}</li>
+        </ul>
+      </div>
+
     </div>
- 
+  </div>
+
+  <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
+    <h4 class="card-header">Add Your New Information</h4>
+    <div class="card-body">
+      <label class="col-form-label">Your Phone Number</label>
+      <input
+        class="form-control"
+        placeholder="678-123-4567"
+        onclick="this.placeholder=' '"
+        id="personal-number"
+      />
+
+      <label class="col-form-label">Emergency Contact</label>
+      <input
+        class="form-control"
+        placeholder="Junghoon Yoon"
+        onclick="this.placeholder=''"
+        onfocus="this.placeholder=''"
+        id="emergency-name"
+      />
+
+      <label class="col-form-label">Emergency Contact Phone Number</label>
+      <input
+        class="form-control"
+        placeholder="404-456-7890"
+        onclick="this.placeholder=''"
+        onfocus="this.placeholder=''"
+        id="emergency-number"
+      />
+
+      <label class="col-form-label">Blood Type</label>
+      <input
+        class="form-control"
+        placeholder="O-"
+        onclick="this.placeholder=''"
+        onfocus="this.placeholder=''"
+        id="blood-type"
+      />
+
+      <label class="col-form-label">Allergies</label>
+      <input
+        class="form-control"
+        placeholder="Peanuts, Penicillin"
+        onclick="this.placeholder=''"
+        onfocus="this.placeholder=''"
+        id="allergies"
+      />
+
+      <label class="col-form-label">Add Any Transplants and Dates</label>
+      <input
+        class="form-control"
+        placeholder="Kidney Transplant March 2020"
+        onclick="this.placeholder=''"
+        onfocus="this.placeholder=''"
+        id="transplants"
+      />
+
+      <label class="col-form-label">Add Any Implants/Devices</label>
+      <input
+        class="form-control"
+        placeholder="Pacemaker"
+        onclick="this.placeholder=''"
+        onfocus="this.placeholder=''"
+        id="devices"
+      />
+
+      <button
+        type="submit"
+        class="btn btn-primary mt-3"
+        id="submit-new"
+      >Submit</button>
+
+    </div>
+  </div>
+
 </section>
 
 <script src="/js/information.js"></script>
