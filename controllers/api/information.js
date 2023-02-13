@@ -5,12 +5,16 @@ router.get("/", async (req, res) => {
   try {
     // get all the medications using findAll for the current logged in user
     // render the medications in homepage
-    const informationData = await Information.findAll({
+    const informationData = await Information.findOne({
       where: { user_id: req.session.user_id },
+      raw: true,
     });
+
+    console.log(informationData);
     res.render("information", {
       logged_in: req.session.logged_in,
       user_id: req.session.user_id,
+      user_name: req.session.user_name,
       information: informationData,
     });
   } catch (error) {
@@ -33,12 +37,11 @@ router.post("/", async (req, res) => {
       // user_id: req.body.user_id,
       ...req.body,
     });
-
-    res.json(newInformation)
+    res.json(newInformation);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send(err);
   }
-  catch (err) {
-    res.send(err)
-  }
-})
+});
 
 module.exports = router;
