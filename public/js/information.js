@@ -8,6 +8,7 @@ async function addInformation(event) {
   const allergies = document.getElementById("allergies");
   const transplants = document.getElementById("transplants");
   const devices = document.getElementById("devices");
+  const notes = document.getElementById("notes")
   const userId = document.getElementById("medication-user-id").value.trim();
 
   const informationArray = [
@@ -18,6 +19,7 @@ async function addInformation(event) {
     allergies,
     transplants,
     devices,
+    notes,
   ];
 
   const valueArray = informationArray.map((info) => {
@@ -36,6 +38,7 @@ async function addInformation(event) {
     allergies: valueArray[4],
     transplants: valueArray[5],
     devices: valueArray[6],
+    notes: valueArray[7],
     user_id: userId,
   };
 
