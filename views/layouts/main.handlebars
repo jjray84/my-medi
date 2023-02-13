@@ -9,7 +9,7 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://bootswatch.com/5/minty/bootstrap.min.css"
+      href="https://bootswatch.com/5/pulse/bootstrap.min.css"
       rel="stylesheet"
       type="text/css"
     />
@@ -30,7 +30,7 @@
     <title>My Medi</title>
   </head>
 
-  <nav class="navbar navbar-expand-large bg-primary">
+  <nav class="navbar navbar-expand-large shadow-lg bg-primary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img />
@@ -39,15 +39,15 @@
       {{#if logged_in}}
         <nav class="ml-auto">
           <a href="#" onclick="window.history.back()">
-            <button class="btn bg-secondary">Back</button>
+            <button class="btn bg-secondary shadow-lg text-light">Back</button>
           </a>
-          <button class="btn bg-secondary" id="logout">Logout</button>
+          <button class="btn bg-secondary shadow-lg text-light" id="logout">Logout</button>
         </nav>
       {{/if}}
     </div>
   </nav>
 
-  <body style="background-color: bisque">
+  <body class="bg-light">
     <main>
       {{{body}}}
     </main>
