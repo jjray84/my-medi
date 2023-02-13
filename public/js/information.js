@@ -45,7 +45,7 @@ async function addInformation(event) {
   console.log(information);
 
   const response = await fetch("/edit/information", {
-    method: "POST",
+    method: "PUT",
     body: JSON.stringify(information),
     headers: {
       "Content-Type": "application/json",
