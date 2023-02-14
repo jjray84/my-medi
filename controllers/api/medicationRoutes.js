@@ -9,6 +9,7 @@ router.get("/", previousUser, async (req, res) => {
   try {
     // get all the medications using findAll for the current logged in user
     // render the medications in homepage
+    console.log(req.session);
     const medicationData = await Medication.findAll({
       where: { user_id: req.session.user_id },
       raw: true,
