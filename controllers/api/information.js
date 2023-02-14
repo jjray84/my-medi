@@ -28,16 +28,20 @@ router.get("/", previousUser, async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     const newInformation = await Information.create({
-      // personal_number: req.body.personal_number,
-      // emergency_contact: req.body.emergency_contact,
-      // emergency_number: req.body.emergency_number,
-      // blood_type: req.body.blood_type,
-      // allergies: req.body.allergies,
-      // transplants: req.body.transplants,
-      // devices: req.body.devices,
-      // user_id: req.body.user_id,
       ...req.body,
     });
+    res.json(newInformation);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send(err);
+  }
+});
+
+router.put("/", async (req, res) => {
+  try {
+    const newInformation = await Information.update({
+      ...req.body,
+    },{where: {user_id: req.session.user_id, }});
     res.json(newInformation);
   } catch (err) {
     console.error(err);
