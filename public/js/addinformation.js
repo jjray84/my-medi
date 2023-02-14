@@ -1,4 +1,5 @@
 const submitButton = document.getElementById("submit-new");
+
 async function addInformation(event) {
   event.preventDefault();
   const personal_number = document.getElementById("personal-number");
@@ -42,8 +43,6 @@ async function addInformation(event) {
     user_id: userId,
   };
 
-  console.log(information);
-
   const response = await fetch("/edit/information", {
     method: "POST",
     body: JSON.stringify(information),
@@ -59,4 +58,5 @@ async function addInformation(event) {
     alert("Failed to add information");
   }
 }
+
 submitButton.addEventListener("click", addInformation);
