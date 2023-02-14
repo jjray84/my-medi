@@ -22,9 +22,9 @@ When you open the application, you will be presented with a login screen.  If yo
 
 
 ## Screen Shots
-[homePage](./public/assets/HomePage.png)     
-[EditMeds](./public/assets/EditMeds.png)     
-[EditInfo](./public/assets/EditInfo.png)      
+![homePage](./public/assets/HomePage.png)     
+![EditMeds](./public/assets/EditMeds.png)     
+![EditInfo](./public/assets/EditInfo.png)      
 
 ## Live Link
 https://my-medi.herokuapp.com/
